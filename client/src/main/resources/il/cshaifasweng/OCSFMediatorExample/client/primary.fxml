@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="218.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.PrimaryController">
+   <children>
+      <Button fx:id="showStudentsBTN" layoutX="95.0" layoutY="138.0" mnemonicParsing="false" onAction="#showStudentsList" text="Show Students List" />
+      <TextField fx:id="PrototypeTF" alignment="CENTER" layoutX="95.0" layoutY="56.0" prefHeight="25.0" prefWidth="116.0" text="Prototype" />
+   </children>
+</AnchorPane>

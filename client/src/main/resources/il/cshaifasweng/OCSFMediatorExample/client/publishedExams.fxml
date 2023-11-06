@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="refreshBTN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.PublishedExamsController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="61.0" layoutY="39.0" prefHeight="23.0" prefWidth="278.0" text="Published Exams" textFill="#20cdf5">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="publishedExamsTable" layoutX="14.0" layoutY="116.0" prefHeight="414.0" prefWidth="604.0">
+        <columns>
+          <TableColumn fx:id="examIdCOL" prefWidth="60.000003814697266" text="Exam ID " />
+          <TableColumn fx:id="subjectCOL" prefWidth="99.33333587646484" text="Subject" />
+            <TableColumn fx:id="courseCOL" prefWidth="99.33333587646484" text="Course" />
+            <TableColumn fx:id="examTypeCOL" prefWidth="99.33333587646484" text="Exam Type" />
+            <TableColumn fx:id="durationCOL" prefWidth="64.66668701171875" text="Duration" />
+            <TableColumn fx:id="DateCol" prefWidth="112.66659545898438" text="Publishing Date" />
+            <TableColumn fx:id="CodeCol" prefWidth="64.0" text="PassCode" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="59.0" fitWidth="36.0" layoutX="872.0" layoutY="28.0" onMouseClicked="#refreshFunc" pickOnBounds="true" preserveRatio="true" rotate="18.4">
+         <image>
+            <Image url="@../../../../img/Refresh.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="185.0" fitWidth="217.0" layoutX="695.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/publishedICON.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="requestTimeBTN" disable="true" layoutX="743.0" layoutY="562.0" mnemonicParsing="false" onAction="#RequestTimeFunc" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #20cdf5;" text="Request Extra Time" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="789.0" layoutY="492.0" />
+      <Label fx:id="doubleCLK" layoutX="14.0" layoutY="94.0" prefHeight="17.0" prefWidth="437.0" textFill="#9a9696" />
+      <Button fx:id="backBTN" layoutX="61.0" layoutY="560.0" mnemonicParsing="false" onAction="#backFunc" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #20cdf5;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="explanationTF" disable="true" layoutX="658.0" layoutY="455.0" prefHeight="79.0" prefWidth="234.0" promptText="Please provide a brief explanation for requesting extra time for the exam...">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="extraTimeTF" layoutX="743.0" layoutY="405.0" prefHeight="32.0" prefWidth="149.0" promptText="Minutes" />
+      <Label fx:id="extraTimeLabel" layoutX="677.0" layoutY="408.0" prefHeight="25.0" prefWidth="65.0" text="Extra Time" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

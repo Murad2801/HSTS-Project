@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.StudentExamController">
+    <content>
+        <AnchorPane prefHeight="394.0" prefWidth="700.0">
+            <children>
+                <VBox fx:id="examContainer" layoutX="29.0" layoutY="240.0" prefHeight="297.0" prefWidth="629.0" />
+                <Label fx:id="highSchoolLabel" layoutX="192.0" layoutY="28.0" prefHeight="22.0" prefWidth="315.0" text="High School Of Haifa" textAlignment="CENTER" textFill="#1832dd" textOverrun="CENTER_WORD_ELLIPSIS" underline="true">
+                    <font>
+                        <Font name="David Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="subjectLabel" layoutX="252.0" layoutY="61.0" prefHeight="18.0" prefWidth="196.0" text="subject" textFill="#1832dd" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="David Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="courseLabel" layoutX="262.0" layoutY="88.0" prefHeight="18.0" prefWidth="175.0" text="course" textFill="#1832dd" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="David Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="dateLabel" layoutX="552.0" layoutY="127.0" prefHeight="18.0" prefWidth="105.0" text="Date" />
+                <Label fx:id="teacherName" layoutX="96.0" layoutY="127.0" prefHeight="18.0" prefWidth="88.0" text="name" />
+                <Label fx:id="notesLabel" layoutX="29.0" layoutY="164.0" prefHeight="33.0" prefWidth="492.0" text="Notes : " />
+            <Label fx:id="teacherTITLE" layoutX="29.0" layoutY="127.0" prefHeight="18.0" prefWidth="86.0" text="Teacher : ">
+               <font>
+                  <Font name="David Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="timerLabel" layoutX="552.0" layoutY="197.0" prefHeight="35.0" prefWidth="109.0" text="TIMER " />
+            <Label fx:id="timeRemainingLabel" layoutX="552.0" layoutY="181.0" prefHeight="17.0" prefWidth="130.0" text="Time Remaining" />
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

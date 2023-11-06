@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test_system_database?serverTimezone=UTC
+        </property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Messi2801</property>
+        <!-- Add this line to specify the server time zone -->
+
+        <!-- JDBC connection pool (optional) -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- SQL dialect for the chosen database -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+        <!-- Automatic table creation/update -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Mapping files -->
+        <!-- Add your entity mappings here -->
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Students"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Users"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Subjects"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Courses"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Questions"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Exams"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.StudentsUser"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.TeachersUser"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.ManagerUser"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.ReadyQuestions"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.ReadyExams"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.SolvedExams"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Answer"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.Request"/>
+        <mapping class="il.cshaifasweng.OCSFMediatorExample.entities.TraditionalSolvedExam"/>
+
+
+    </session-factory>
+</hibernate-configuration>

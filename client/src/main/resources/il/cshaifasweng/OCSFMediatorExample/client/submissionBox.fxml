@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.SubmissionBoxController">
+   <children>
+      <ListView fx:id="submissionBox" layoutX="54.0" layoutY="317.0" onEditStart="#submissionBoxFunc" prefHeight="264.0" prefWidth="369.0" />
+      <Label fx:id="timeRemainingLabel" layoutX="54.0" layoutY="90.0" prefHeight="28.0" prefWidth="301.0" text="Time Remaining For Submission :">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="timerLabel" layoutX="355.0" layoutY="90.0" prefHeight="28.0" prefWidth="183.0" text="TIMER" />
+      <Label fx:id="WarningLabel" layoutX="54.0" layoutY="287.0" prefHeight="17.0" prefWidth="369.0" text="Be Aware ! You won't be able to Submit when Time is up ! " textFill="RED" />
+      <ImageView fx:id="dragIMG" fitHeight="107.0" fitWidth="133.0" layoutX="172.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/upload1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dragLabel" layoutX="112.0" layoutY="497.0" prefHeight="17.0" prefWidth="253.0" text="Drag your Solved Exam here" />
+      <ImageView fitHeight="201.0" fitWidth="183.0" layoutX="693.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/examm2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="SubmitBTN" disable="true" layoutX="718.0" layoutY="555.0" mnemonicParsing="false" onAction="#submitExamFunc" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #20cdf5;" text="Submit Exam" textFill="WHITE" />
+      <Label fx:id="fileLink" layoutX="54.0" layoutY="218.0" onMouseClicked="#openWordFileFunc" prefHeight="20.0" prefWidth="253.0" text="Click here to open the Word file ! " textFill="#0000ee" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow level="0.24" />
+         </effect>
+      </Label>
+      <Label layoutX="54.0" layoutY="238.0" prefHeight="18.0" prefWidth="290.0" text="or open the ./WORD_exams folder in your computer" textFill="#00000087">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

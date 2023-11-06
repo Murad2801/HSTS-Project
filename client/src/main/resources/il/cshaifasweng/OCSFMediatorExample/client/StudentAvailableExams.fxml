@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.AvailableExamsController">
+   <children>
+      <ImageView fx:id="refreshBtn" fitHeight="35.0" fitWidth="704.0" layoutX="877.0" layoutY="30.0" onMouseClicked="#refreshFunc" pickOnBounds="true" preserveRatio="true" rotate="78.7">
+         <image>
+            <Image url="@../../../../img/Refresh.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableViewExams" layoutX="14.0" layoutY="140.0" prefHeight="371.0" prefWidth="704.0">
+        <columns>
+          <TableColumn fx:id="subjectCOL" prefWidth="119.33330535888672" text="Subject" />
+          <TableColumn fx:id="courseCOL" prefWidth="120.00001525878906" text="Course" />
+            <TableColumn fx:id="examTypeCOL" prefWidth="120.6666259765625" text="Exam Type" />
+            <TableColumn fx:id="durationCOL" prefWidth="66.66668701171875" text="Duration" />
+            <TableColumn fx:id="DateCol" prefWidth="90.00006103515625" text="Date" />
+            <TableColumn fx:id="TeacherCol" prefWidth="78.0" text="Teacher" />
+            <TableColumn fx:id="ExamIdCol" prefWidth="78.0" text="Exam ID" />
+        </columns>
+      </TableView>
+      <Label fx:id="dateLabel" layoutX="249.0" layoutY="28.0" prefHeight="55.0" prefWidth="309.0" text="Date">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="dayLabel" layoutX="63.0" layoutY="28.0" prefHeight="55.0" prefWidth="175.0" text="Day">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="startExamBTN" layoutX="760.0" layoutY="553.0" mnemonicParsing="false" onAction="#startExamFunc" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #20cdf5;" text="Start Exam" textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="availableLabel" layoutX="15.0" layoutY="122.0" prefHeight="19.0" prefWidth="704.0" textFill="#9a9696">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Button fx:id="backBTN" layoutX="63.0" layoutY="553.0" mnemonicParsing="false" onAction="#backFunc" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #20cdf5;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="examPic" fitHeight="185.0" fitWidth="153.0" layoutX="780.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/examPic.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="goodLuckLabel" layoutX="719.0" layoutY="83.0" text="Good Luck !">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passcodeTF" disable="true" layoutX="759.0" layoutY="487.0" prefHeight="28.0" prefWidth="154.0" promptText="Enter 4-digit code" />
+      <TextField fx:id="IdTF" layoutX="759.0" layoutY="447.0" prefHeight="26.0" prefWidth="154.0" promptText="Enter Your Student ID" visible="false" />
+      <Button fx:id="SubmitCode" disable="true" layoutX="760.0" layoutY="553.0" mnemonicParsing="false" onAction="#SubmitCodeFunc" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #20cdf5;" text="Submit Code" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

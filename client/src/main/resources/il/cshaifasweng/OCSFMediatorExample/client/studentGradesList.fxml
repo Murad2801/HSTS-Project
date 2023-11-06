@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.StudentGradesListController">
+   <children>
+      <Button fx:id="backBTN" layoutX="14.0" layoutY="525.0" mnemonicParsing="false" onAction="#backFunc" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #20cdf5;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="InfoTable" layoutX="14.0" layoutY="64.0" prefHeight="441.0" prefWidth="408.0">
+        <columns>
+          <TableColumn fx:id="CourseCal" prefWidth="75.0" text="Course" />
+          <TableColumn fx:id="TeacherCal" prefWidth="75.0" text="Teacher" />
+            <TableColumn fx:id="IdCal" prefWidth="105.33335876464844" text="Exam-Identifier" />
+            <TableColumn fx:id="GradeCal" prefWidth="64.6666259765625" text="Grade" />
+            <TableColumn fx:id="dateCal" prefWidth="85.33331298828125" text="Date" />
+        </columns>
+      </TableView>
+      <ScrollPane fx:id="ScrollP" layoutX="445.0" layoutY="34.0" prefHeight="495.0" prefWidth="433.0">
+         <content>
+            <AnchorPane fx:id="Anchor" maxWidth="431.0" minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="431.0">
+               <children>
+                  <VBox fx:id="ExamContainer" layoutX="20.0" layoutY="237.0" prefHeight="233.0" prefWidth="389.0" />
+                  <Label fx:id="HightSchool" layoutX="105.0" layoutY="14.0" prefHeight="27.0" prefWidth="260.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CourseLabel" layoutX="116.0" layoutY="41.0" prefHeight="21.0" prefWidth="231.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SubjectLabel" layoutX="117.0" layoutY="62.0" prefHeight="17.0" prefWidth="228.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NoteLabel" layoutX="14.0" layoutY="147.0" prefHeight="21.0" prefWidth="415.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GradeLabel" layoutX="278.0" layoutY="110.0" prefHeight="21.0" prefWidth="137.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" layoutX="1.0" layoutY="110.0" prefHeight="21.0" prefWidth="235.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NoteLabel1" layoutX="14.0" layoutY="168.0" prefHeight="21.0" prefWidth="409.0" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="commentLabel" layoutX="12.0" layoutY="189.0" prefHeight="21.0" prefWidth="385.0" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label fx:id="doubleLabel" layoutX="14.0" layoutY="40.0" prefHeight="21.0" prefWidth="426.0" text="Double Click to choose an exam" textAlignment="RIGHT" textFill="#a6a9ac">
+         <font>
+            <Font name="Bell MT" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="refreshBtn" fitHeight="35.0" fitWidth="704.0" layoutX="388.0" layoutY="16.0" onMouseClicked="#refreshF" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

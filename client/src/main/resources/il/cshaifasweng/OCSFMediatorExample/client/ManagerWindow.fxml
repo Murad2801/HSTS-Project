@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="645.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.ManagerController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="180.0" layoutX="715.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/LastManager.jpeg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="managerTable" layoutX="27.0" layoutY="321.0" prefHeight="298.0" prefWidth="660.0">
+        <columns>
+            <TableColumn fx:id="teacherCOL" minWidth="0.0" prefWidth="66.66665649414062" text="Teacher" />
+          <TableColumn fx:id="examIdCOL" minWidth="0.0" prefWidth="70.0" text="Exam ID " />
+            <TableColumn fx:id="courseCOL" minWidth="0.0" prefWidth="138.66668701171875" text="Course" />
+            <TableColumn fx:id="requestCOL" minWidth="0.0" prefWidth="384.0" text="Request">
+               <columns>
+                  <TableColumn fx:id="extraTimeCOL" minWidth="0.0" prefWidth="68.0" text="Extra Time" />
+                  <TableColumn fx:id="explanationCOL" minWidth="0.0" prefWidth="316.0" text="Explanation" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label fx:id="greetManager" layoutX="94.0" layoutY="44.0" prefHeight="26.0" prefWidth="228.0" text="Label" textFill="#20cdf5">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font></Label>
+      <Button id="veiwGrades" fx:id="viewGradesBTN" layoutX="90.0" layoutY="155.0" mnemonicParsing="false" onAction="#clickViewGradesBTN" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #20cdf5;" text="View Grades" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="veiwExams" fx:id="viewExamsBTN" layoutX="90.0" layoutY="230.0" mnemonicParsing="false" onAction="#clickViewExamsBTN" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #20cdf5;" text="View Exams" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="veiwQuestions" fx:id="viewQuestionsBTN" layoutX="390.0" layoutY="155.0" mnemonicParsing="false" onAction="#clickViewQuestionsBTN" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #20cdf5;" text="View Questions" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="moreInformation" fx:id="moreInformationBTN" layoutX="390.0" layoutY="230.0" mnemonicParsing="false" onAction="#clickMoreInformationBTN" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #20cdf5;" text="More Information" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="LogOutBTN" layoutX="878.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickLogOutBTN" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: #f7f9f9;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../../../../img/logOutIcon1.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="moreInformation" fx:id="acceptRequestBTN" disable="true" layoutX="733.0" layoutY="505.0" mnemonicParsing="false" onAction="#acceptRequestFunc" prefHeight="35.0" prefWidth="167.0" style="-fx-background-color: #20cdf5;" text="Accept Request" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button id="moreInformation" fx:id="denyRequestBTN" disable="true" layoutX="733.0" layoutY="557.0" mnemonicParsing="false" onAction="#DenyRequestFunc" prefHeight="35.0" prefWidth="167.0" style="-fx-background-color: #20cdf5;" text="Deny Request" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="doubleClkLabel" layoutX="27.0" layoutY="297.0" prefHeight="17.0" prefWidth="660.0" text="Double-Click to Select a Request " textFill="#9a9696" />
+   </children>
+</AnchorPane>

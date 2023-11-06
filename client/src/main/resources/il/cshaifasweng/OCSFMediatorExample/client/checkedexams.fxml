@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="645.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.CheckedExamsController">
+   <children>
+      <ComboBox fx:id="SubjectCombo" layoutX="106.0" layoutY="14.0" onAction="#ChooseSubjectFunc" prefWidth="150.0" promptText="Subjects" />
+      <ComboBox fx:id="CourseCombo" disable="true" layoutX="308.0" layoutY="14.0" onAction="#ChooseCourseFunc" prefWidth="150.0" promptText="Courses" />
+      <TableView fx:id="InfoTable" layoutX="14.0" layoutY="79.0" opacity="0.9" prefHeight="411.0" prefWidth="411.0">
+        <columns>
+          <TableColumn fx:id="StudentIdCol" prefWidth="100.66668701171875" text="StudentID" />
+            <TableColumn fx:id="StudentNameCol" prefWidth="110.00003051757812" text="StudentName" />
+            <TableColumn fx:id="FinalGradeCol" prefWidth="80.66665649414062" text="FinalGrade" />
+            <TableColumn fx:id="DateCol" prefWidth="124.66668701171875" text="Date" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="ExamCombo" disable="true" layoutX="502.0" layoutY="14.0" onAction="#ChooseExamFunc" prefWidth="150.0" promptText="ExamCode" />
+      <ScrollPane fx:id="ScrollP" layoutX="458.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="450.0">
+        <content>
+          <AnchorPane fx:id="Anchor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="487.0" prefWidth="450.0" visible="false">
+               <children>
+                  <VBox fx:id="ExamContainer" layoutX="20.0" layoutY="211.0" maxHeight="1.7976931348623157E308" prefHeight="274.0" prefWidth="390.0" />
+                  <Label fx:id="HightSchool" layoutX="105.0" layoutY="14.0" prefHeight="27.0" prefWidth="260.0" text="High School Of Haifa" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CourseLabel" layoutX="116.0" layoutY="41.0" prefHeight="21.0" prefWidth="231.0" text="Course" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SubjectLabel" layoutX="117.0" layoutY="62.0" prefHeight="17.0" prefWidth="228.0" text="Subject" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="teacherLabel" layoutX="14.0" layoutY="110.0" prefHeight="17.0" prefWidth="167.0" text="Teacher Name: " textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NoteLabel" layoutX="14.0" layoutY="147.0" prefHeight="21.0" prefWidth="415.0" text="Notes:" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GradeLabel" layoutX="278.0" layoutY="110.0" prefHeight="21.0" prefWidth="137.0" text="Grade: " textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" layoutX="123.0" layoutY="110.0" prefHeight="21.0" prefWidth="113.0" text="name" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NoteLabel1" layoutX="14.0" layoutY="168.0" prefHeight="21.0" prefWidth="415.0" text="Notes:" textAlignment="CENTER" textFill="#226ecc">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ImageView fx:id="backBTN" fitHeight="27.0" fitWidth="36.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#backFUNC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="changeAllBtn" disable="true" layoutX="808.0" layoutY="605.0" mnemonicParsing="false" onAction="#ChangeForAll" prefHeight="25.0" prefWidth="111.0" text="Change For All" visible="false" />
+      <Label fx:id="nameLabel1" layoutX="14.0" layoutY="534.0" prefHeight="21.0" prefWidth="228.0" text=" Reason for changing the grade:" textAlignment="CENTER" textFill="#226ecc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel11" layoutX="14.0" layoutY="501.0" prefHeight="21.0" prefWidth="260.0" text="Insert a new grade for student:" textAlignment="CENTER" textFill="#226ecc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gradeTF" disable="true" layoutX="239.0" layoutY="499.0" prefHeight="25.0" prefWidth="82.0" promptText="New Grade" />
+      <Label fx:id="nameLabel12" layoutX="14.0" layoutY="58.0" prefHeight="21.0" prefWidth="166.0" text="Double Click to choose a student" textAlignment="RIGHT" textFill="#a6a9ac">
+         <font>
+            <Font name="Bell MT" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ReasonTF" alignment="TOP_LEFT" disable="true" layoutX="14.0" layoutY="561.0" prefHeight="69.0" prefWidth="278.0" promptText="Reason" />
+      <Button fx:id="Publish" disable="true" layoutX="808.0" layoutY="605.0" mnemonicParsing="false" onAction="#PublishFunc" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #20cdf5;" text="Publish Grade" textFill="WHITE" />
+      <Button fx:id="changeOneBtn" layoutX="785.0" layoutY="605.0" mnemonicParsing="false" onAction="#ChangeForOne" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #20cdf5;" text="Change And Publish" textFill="WHITE" visible="false" />
+      <Label fx:id="nameLabel13" layoutX="451.0" layoutY="534.0" prefHeight="25.0" prefWidth="199.0" text="Note for the student:" textAlignment="CENTER" textFill="#226ecc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NoteTF" alignment="TOP_LEFT" disable="true" layoutX="451.0" layoutY="560.0" prefHeight="70.0" prefWidth="278.0" promptText="Note" />
+      <ImageView fx:id="refreshBtn" fitHeight="35.0" fitWidth="704.0" layoutX="891.0" layoutY="9.0" onMouseClicked="#refreshFunc" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
